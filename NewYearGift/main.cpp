@@ -17,9 +17,11 @@ std::shared_ptr<BaseSweet> getPtr(char choise)
         case 'l':
             return std::make_shared<Lollypop>();
             break;
-        default:
-            break;
     }
+    
+    return nullptr;
+    
+    
 }
 
 int main()

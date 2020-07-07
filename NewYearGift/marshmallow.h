@@ -12,14 +12,14 @@ public:
     
     std::istream& read(std::istream& in) override
     {
-        BaseSweet:: read(<#in#>);
+        BaseSweet:: read(in);
         in >> inChocolate >> flavor;
         return in;
     }
     
     std::ostream& print(std::ostream& out) const override
     {
-        BaseSweet::print(<#out#>);
+        BaseSweet::print(out);
         out << " chocolate " << inChocolate << " flavor " << flavor;
         return out;
     }
