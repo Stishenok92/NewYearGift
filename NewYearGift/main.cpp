@@ -1,15 +1,32 @@
-//
-//  main.cpp
-//  NewYearGift
-//
-//  Created by Vadim Stishenok on 07.07.2020.
-//  Copyright © 2020 Vadim Stishenok. All rights reserved.
-//
+#include "base.h"
+#include "chocolate.h"
+#include "marshmallow.h"
+#include "lollypop.h"
+#include "present.h"
 
-#include <iostream>
+std::shared_ptr<BaseSweet> getPtr(char choise)
+{
+    switch (choise)
+    {
+        case 'c':
+            return std::make_shared<Chocolate>();
+            break;
+        case 'm':
+            return std::make_shared<Marshmallow>();
+            break;
+        case 'l':
+            return std::make_shared<Lollypop>();
+            break;
+        default:
+            break;
+    }
+}
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main()
+{
+ 
+//    std::vector<std::shared_ptr<BaseSweet>> sweets;
+    
+    system("pause");
     return 0;
 }

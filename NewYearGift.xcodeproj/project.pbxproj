@@ -25,6 +25,11 @@
 /* Begin PBXFileReference section */
 		AB9CE3AB24B449E0000A4D28 /* NewYearGift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NewYearGift; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9CE3AE24B449E0000A4D28 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AB9CE3B524B44EBB000A4D28 /* base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
+		AB9CE3B624B44EC4000A4D28 /* chocolate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chocolate.h; sourceTree = "<group>"; };
+		AB9CE3B724B44ED3000A4D28 /* marshmallow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = marshmallow.h; sourceTree = "<group>"; };
+		AB9CE3B824B44EE7000A4D28 /* lollypop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lollypop.h; sourceTree = "<group>"; };
+		AB9CE3B924B45F9C000A4D28 /* present.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = present.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				AB9CE3AE24B449E0000A4D28 /* main.cpp */,
+				AB9CE3B524B44EBB000A4D28 /* base.h */,
+				AB9CE3B624B44EC4000A4D28 /* chocolate.h */,
+				AB9CE3B724B44ED3000A4D28 /* marshmallow.h */,
+				AB9CE3B824B44EE7000A4D28 /* lollypop.h */,
+				AB9CE3B924B45F9C000A4D28 /* present.h */,
 			);
 			path = NewYearGift;
 			sourceTree = "<group>";
