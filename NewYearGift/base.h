@@ -36,7 +36,8 @@ public:
     }
 };
 
-//std::ostream& operator<<(std::ostream& out, BaseSweet*)
-//{
-//
-//}
+std::ostream& operator<<(std::ostream& out, std::shared_ptr<BaseSweet> ptr)
+{
+    ptr->print(out);
+    return out;
+}
