@@ -28,9 +28,9 @@ public:
 
 void Present:: findSweetSugar(double min, double max)
 {
-    std::sort(present.begin(), present.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getSugar() > b->getSugar(); });
-    auto tempBegin = std::find_if(present.begin(), present.end(), [min] (std::shared_ptr<BaseSweet> a) { return a->getSugar() > min; });
-    auto tempEnd = std::find_if(present.begin(), present.end(), [max] (std::shared_ptr<BaseSweet> a) { return a->getSugar() <= max; });
+    std::sort(present.begin(), present.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getSugar() < b->getSugar(); });
+    auto tempBegin = std::find_if(present.begin(), present.end(), [min] (std::shared_ptr<BaseSweet> a) { return a->getSugar() >= min; });
+    auto tempEnd = std::find_if(present.begin(), present.end(), [max] (std::shared_ptr<BaseSweet> a) { return a->getSugar() > max; });
     
     if (tempBegin == present.end())
     {
@@ -39,10 +39,12 @@ void Present:: findSweetSugar(double min, double max)
     }
     else if(tempEnd == present.end())
     {
+        std::cout << "\nSweets suitable for criteria:\n";
         std::copy(tempBegin, present.end(), std::ostream_iterator<std::shared_ptr<BaseSweet>>(std::cout, "\n"));
     }
     else
     {
+        std::cout << "\nSweets suitable for criteria:\n";
         std::copy(tempBegin, tempEnd, std::ostream_iterator<std::shared_ptr<BaseSweet>>(std::cout, "\n"));
     }
 }
@@ -110,7 +112,6 @@ void Present:: sortName()
 {
     std::sort(present.begin(), present.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getName() < b->getName(); });
 }
-
 
 void Present:: sortWeight()
 {

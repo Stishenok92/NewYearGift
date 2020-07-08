@@ -36,7 +36,7 @@ int main()
             case 1:
             {
                 double weight;
-                std::cout << "\nEnter weight present: ";
+                std::cout << "\nCreate by weight\nEnter weight present: ";
                 std::cin >> weight;
                 present.createByWeight(weight, sweets);
                 break;
@@ -44,7 +44,7 @@ int main()
             case 2:
             {
                 double cost;
-                std::cout << "\nEnter cost present: ";
+                std::cout << "\nСreate by cost\nEnter cost present: ";
                 std::cin >> cost;
                 present.createByCost(cost, sweets);
                 break;
@@ -63,7 +63,7 @@ int main()
         }
         else
         {
-            std::cout << "\nPresent consists of sweets:\n\n";
+            std::cout << "\nPresent consists of sweets:\n";
             present.print(std::cout);
         }
         
