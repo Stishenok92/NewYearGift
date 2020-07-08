@@ -1,5 +1,5 @@
 #pragma once
-#include "base.h"
+#include "headers.h"
 
 class Chocolate: public BaseSweet
 {
@@ -9,7 +9,7 @@ private:
     bool filling;
 public:
     Chocolate() = default;
-    ~ Chocolate() = default;
+    ~ Chocolate() override = default;
     
     std::istream& read(std::istream& in) override
     {

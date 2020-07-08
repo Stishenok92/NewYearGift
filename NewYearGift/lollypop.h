@@ -1,5 +1,5 @@
 #pragma once
-#include "base.h"
+#include "headers.h"
 
 class Lollypop: public BaseSweet
 {
@@ -8,7 +8,7 @@ private:
     std::string shape;
 public:
     Lollypop() = default;
-    ~Lollypop() = default;
+    ~Lollypop() override = default;
     
     std::istream& read(std::istream& in) override
     {

@@ -30,6 +30,8 @@
 		AB9CE3B724B44ED3000A4D28 /* marshmallow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = marshmallow.h; sourceTree = "<group>"; };
 		AB9CE3B824B44EE7000A4D28 /* lollypop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lollypop.h; sourceTree = "<group>"; };
 		AB9CE3B924B45F9C000A4D28 /* present.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = present.h; sourceTree = "<group>"; };
+		AB9CE3BC24B599DB000A4D28 /* sweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sweet.h; sourceTree = "<group>"; };
+		AB9CE3BD24B5A0B2000A4D28 /* headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = headers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,8 @@
 				AB9CE3B724B44ED3000A4D28 /* marshmallow.h */,
 				AB9CE3B824B44EE7000A4D28 /* lollypop.h */,
 				AB9CE3B924B45F9C000A4D28 /* present.h */,
+				AB9CE3BC24B599DB000A4D28 /* sweet.h */,
+				AB9CE3BD24B5A0B2000A4D28 /* headers.h */,
 			);
 			path = NewYearGift;
 			sourceTree = "<group>";

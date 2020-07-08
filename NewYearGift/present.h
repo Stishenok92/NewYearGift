@@ -1,11 +1,12 @@
 #pragma once
-#include "base.h"
-#include <vector>
+#include "headers.h"
 
 class Present
 {
 private:
     std::vector<std::shared_ptr<BaseSweet>> present;
+    double weight;
+    double cost;
     
 public:
     Present() = default;

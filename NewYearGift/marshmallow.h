@@ -1,5 +1,5 @@
 #pragma once
-#include "base.h"
+#include "headers.h"
 
 class Marshmallow: public BaseSweet
 {
@@ -8,7 +8,7 @@ private:
     std::string flavor;
 public:
     Marshmallow() = default;
-    ~Marshmallow() = default;
+    ~Marshmallow() override = default;
     
     std::istream& read(std::istream& in) override
     {
