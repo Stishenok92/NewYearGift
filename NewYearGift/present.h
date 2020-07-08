@@ -74,6 +74,33 @@ void Present:: createByWeight(double weightMax, Sweet& sweet)
     *this = present;
 }
 
+void Present:: createByCost(double costMax, Sweet& sweet)
+{
+    bool flag = true;
+    Present present;
+    sweet.sortWeight();
+    
+    while (costMax > 0 && flag)
+    {
+        std::for_each(sweet.sweets.begin(), sweet.sweets.end(), [ &costMax, &flag, &present, &sweet] (std::shared_ptr<BaseSweet> sweets)
+                      {
+            if (sweets->getPrice() <= costMax)
+            {
+                costMax -= sweets->getPrice();
+                present.cost += sweets->getPrice();
+                present.weight += sweets->getWeight();
+                present.present.push_back(sweets);
+            }
+            else if (costMax < sweet.sweets.back()->getPrice())
+            {
+                flag = false;
+            }
+        });
+    }
+    
+    *this = present;
+}
+
 void Present:: print(std::ostream& out)
 {
     std::copy(present.begin(), present.end(), std::ostream_iterator<std::shared_ptr<BaseSweet>>(out, "\n"));
