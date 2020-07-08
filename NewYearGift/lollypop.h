@@ -6,7 +6,6 @@ class Lollypop: public BaseSweet
 private:
     std::string taste;
     std::string shape;
-    
 public:
     Lollypop() = default;
     ~Lollypop() override = default;

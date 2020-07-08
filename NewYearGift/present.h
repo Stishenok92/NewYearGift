@@ -8,11 +8,9 @@ private:
     std::vector<std::shared_ptr<BaseSweet>> present;
     double weight = 0; //текущий вес подарка
     double cost = 0; //текущая цена подарка
-    
 public:
     Present() = default;
     ~Present() = default;
-    
     double getCost() const { return cost; }
     double getWeight() const { return weight; }
     void createByWeight(double, Sweet&);

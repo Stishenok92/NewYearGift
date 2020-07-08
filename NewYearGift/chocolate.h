@@ -7,7 +7,6 @@ private:
     double cacao;
     std::string type;
     bool filling;
-    
 public:
     Chocolate() = default;
     ~ Chocolate() override = default;

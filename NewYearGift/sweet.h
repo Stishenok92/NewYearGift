@@ -23,16 +23,24 @@ std::shared_ptr<BaseSweet> ptr(char choise)
     switch (choise)
     {
         case 'c':
+        {
             return std::make_shared<Chocolate>();
             break;
+        }
         case 'm':
+        {
             return std::make_shared<Marshmallow>();
             break;
+        }
         case 'l':
+        {
             return std::make_shared<Lollypop>();
             break;
+        }
         default:
+        {
             return nullptr;
+        }
     }
 }
 

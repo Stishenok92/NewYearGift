@@ -6,7 +6,6 @@ class Marshmallow: public BaseSweet
 private:
     bool inChocolate;
     std::string flavor;
-    
 public:
     Marshmallow() = default;
     ~Marshmallow() override = default;

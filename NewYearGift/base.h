@@ -8,16 +8,13 @@ private:
     double weight;
     double price;
     double sugar;
-    
 public:
     BaseSweet() = default;
     virtual ~BaseSweet() = default; //virtual используется бля правильного удаления объектов
-    
     std::string getName() const { return name; }
     double getWeight() const { return weight; }
     double getPrice() const { return price; }
     double getSugar() const { return sugar; }
-    
     void setName(std::string _name) { name = _name; }
     void setWeight(double _weight) { weight = _weight; }
     void setPrice(double _price) { price = _price; }
