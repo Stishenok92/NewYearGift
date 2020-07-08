@@ -7,6 +7,7 @@ private:
     double cacao;
     std::string type;
     bool filling;
+    
 public:
     Chocolate() = default;
     ~ Chocolate() override = default;
@@ -21,8 +22,7 @@ public:
     std::ostream& print(std::ostream& out) const override
     {
         BaseSweet::print(out);
-        out << " cacao " << cacao << " type " << type << " filling " << filling;
+        out << " | cacao " << cacao << " | type " << type << " | filling " << filling;
         return out;
     }
-    
 };

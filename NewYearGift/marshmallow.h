@@ -6,6 +6,7 @@ class Marshmallow: public BaseSweet
 private:
     bool inChocolate;
     std::string flavor;
+    
 public:
     Marshmallow() = default;
     ~Marshmallow() override = default;
@@ -20,7 +21,7 @@ public:
     std::ostream& print(std::ostream& out) const override
     {
         BaseSweet::print(out);
-        out << " chocolate " << inChocolate << " flavor " << flavor;
+        out << " | chocolate " << inChocolate << " | flavor " << flavor;
         return out;
     }
 };

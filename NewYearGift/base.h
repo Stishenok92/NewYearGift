@@ -8,9 +8,10 @@ private:
     double weight;
     double price;
     double sugar;
+    
 public:
     BaseSweet() = default;
-    virtual ~BaseSweet() = default; //для правильного удаления объектов
+    virtual ~BaseSweet() = default; //virtual используется бля правильного удаления объектов
     
     std::string getName() const { return name; }
     double getWeight() const { return weight; }
@@ -30,7 +31,7 @@ public:
     
     virtual std::ostream& print(std::ostream& out) const
     {
-        out << "name " << name << " weight " << weight << " price " << price << " sugar " << sugar;
+        out << std::left << "name " << std::setw(14) << name << "| weight " << std::setw(6) << weight << "| price " << std::setw(6) << price << "| sugar " << std::setw(6) << sugar;
         return out;
     }
 };

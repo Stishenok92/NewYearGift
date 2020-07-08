@@ -5,10 +5,9 @@ std::shared_ptr<BaseSweet> ptr(char);
 
 class Sweet
 {
-private:
+public:
     std::vector<std::shared_ptr<BaseSweet>> sweets;
     
-public:
     Sweet() = default;
     ~Sweet() = default;
     
@@ -58,15 +57,15 @@ void Sweet:: print(std::ostream& out)
 
 void Sweet:: sortWeight()
 {
-    std::sort(sweets.begin(), sweets.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getWeight() < b->getWeight(); });
+    std::sort(sweets.begin(), sweets.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getWeight() > b->getWeight(); });
 }
 
 void Sweet:: sortPrice()
 {
-    std::sort(sweets.begin(), sweets.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getPrice() < b->getPrice(); });
+    std::sort(sweets.begin(), sweets.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getPrice() > b->getPrice(); });
 }
 
 void Sweet:: sortSugar()
 {
-    std::sort(sweets.begin(), sweets.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getSugar() < b->getSugar(); });
+    std::sort(sweets.begin(), sweets.end(), [] (std::shared_ptr<BaseSweet> a, std::shared_ptr<BaseSweet> b) { return a->getSugar() > b->getSugar(); });
 }
