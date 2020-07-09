@@ -50,6 +50,8 @@ void Present:: createByWeight(double weightMax, Sweet& sweet) //создание
     
     while (weightMax > 0 && flag)
     {
+        //for each просто пробегает по любому контейнеру, где есть begin() и end()
+        //в квадратных скобках лямбда функции передаются объекты, которые находятся вне алгоритма (в нашем случае алгоритм for_each)
         std::for_each(sweet.sweets.begin(), sweet.sweets.end(), [ &weightMax, &flag, &present, &sweet] (std::shared_ptr<BaseSweet> sweets)
         {
             if (sweets->getWeight() <= weightMax)

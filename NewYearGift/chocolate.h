@@ -9,7 +9,7 @@ private:
     bool filling;
 public:
     Chocolate() = default;
-    ~ Chocolate() override = default;
+    ~ Chocolate() override = default; //override пишется так как используется виртуальный деструктор в базовом классе
     
     std::istream& read(std::istream& in) override
     {

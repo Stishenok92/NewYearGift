@@ -69,8 +69,8 @@
 				AB9CE3B624B44EC4000A4D28 /* chocolate.h */,
 				AB9CE3B724B44ED3000A4D28 /* marshmallow.h */,
 				AB9CE3B824B44EE7000A4D28 /* lollypop.h */,
-				AB9CE3B924B45F9C000A4D28 /* present.h */,
 				AB9CE3BC24B599DB000A4D28 /* sweet.h */,
+				AB9CE3B924B45F9C000A4D28 /* present.h */,
 				AB9CE3BD24B5A0B2000A4D28 /* headers.h */,
 			);
 			path = NewYearGift;

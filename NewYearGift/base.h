@@ -10,7 +10,10 @@ private:
     double sugar;
 public:
     BaseSweet() = default;
-    virtual ~BaseSweet() = default; //virtual используется бля правильного удаления объектов
+    
+    //virtual используется бля правильного удаления объектов (если не указать слово virtual, то вывовется только деструктор базового класса)
+    //в полиморфных классах деструктор обязательно должен быть виртуальным, чтобы динамически определялся тип объекта, который нужно удалить
+    virtual ~BaseSweet() = default;
     std::string getName() const { return name; }
     double getWeight() const { return weight; }
     double getPrice() const { return price; }
@@ -20,12 +23,14 @@ public:
     void setPrice(double _price) { price = _price; }
     void setSugar(double _sugar) { sugar = _sugar; }
     
+    //virtual означает что метод будет переопределен в классе наследнике с точно таким же прототипом
     virtual std::istream& read(std::istream& in)
     {
         in >> name >> weight >> price >> sugar;
         return in;
     }
     
+    //virtual означает что метод будет переопределен в классе наследнике с точно таким же прототипом
     virtual std::ostream& print(std::ostream& out) const
     {
         out << std::left << "name " << std::setw(14) << name << "| weight " << std::setw(6) << weight << "| price " << std::setw(6) << price << "| sugar " << std::setw(6) << sugar;
@@ -33,6 +38,7 @@ public:
     }
 };
 
+//перегрузка << нужна для потокового итератора
 std::ostream& operator<<(std::ostream& out, std::shared_ptr<BaseSweet> ptr)
 {
     ptr->print(out);
