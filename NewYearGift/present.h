@@ -35,11 +35,6 @@ void Present:: findSweetSugar(double min, double max)
         std::cout << "\nNot sweet!\n";
         return;
     }
-    else if(tempEnd == present.end())
-    {
-        std::cout << "\nSweets suitable for criteria:\n";
-        std::copy(tempBegin, present.end(), std::ostream_iterator<std::shared_ptr<BaseSweet>>(std::cout, "\n"));
-    }
     else
     {
         std::cout << "\nSweets suitable for criteria:\n";
@@ -47,7 +42,7 @@ void Present:: findSweetSugar(double min, double max)
     }
 }
 
-void Present:: createByWeight(double weightMax, Sweet& sweet)
+void Present:: createByWeight(double weightMax, Sweet& sweet) //создание подарка по весу
 {
     bool flag = true;
     Present present;
